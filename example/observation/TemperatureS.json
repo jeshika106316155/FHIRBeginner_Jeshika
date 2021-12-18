@@ -1,0 +1,18 @@
+{   "resourceType": "Observation",
+    "status": "final",
+    "code": {
+        "coding": [
+            {   "system": "http://loinc.org",
+                "code": "8310-5",
+                "display": "Body temperature"       }
+        ],
+        "text": "Temperature"
+    },
+    "subject": { "reference": "Patient/1411132"   },
+    "valueQuantity": {
+        "value": 36.5,
+        "unit": "degrees C",
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel"
+    }
+}

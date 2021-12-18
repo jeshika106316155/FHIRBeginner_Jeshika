@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<script src="config.js"></script>
+<script src="uploadPatient.js"></script>
+<script src="uploadData.js"></script>
+
+<body onload="GetFHIRURL()">
+  <div class="container">
+    <h3 class="text-center">範例練習</h3>
+    <div class="text-center">
+      <div class="col-md-12">
+        <label class="col-form-label">FHIR伺服器</label>
+        <label class="col-form-label" id="getFHIRURL" aria-readonly="true"></label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>練習一：請輸入要上傳的資源</h4>
+        <div class="col-sm-2">
+          <select id="resourceType">
+            <option>Patient</option>
+            <option>Organization</option>
+            <option>Observation</option>
+            <option>Questionnaire</option>
+          </select>
+        </div>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="uploadData" rows="20">{
+                "resourceType": "Organization",
+                "name": "Volunteer virtual hospital ",
+                "telecom": [
+                  {
+                    "system": "phone",
+                    "value": "+886 278565301",
+                    "use": "mobile"
+                  },
+                  {
+                    "system": "email",
+                    "value": "chhsiao@gms.tcu.edu.tw",
+                    "use": "work"
+                  }
+                ]
+              }
+    </textarea>
+        </div>
+        <div class="col-md-3">
+          <button type="button" class="btn btn-primary btn-block" onclick="uploadData()">上傳資料</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h4 class="row">練習二：請輸入病人資訊</h4>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">身分證字號</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="identifier">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">姓氏</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="family">
+          </div>
+
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">名字</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="given">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">性別</label>
+          <div class="col-sm-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="gender-male" name="gender" class="custom-control-input" value="male">
+              <label class="custom-control-label" for="gender-male">男性</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="gender-female" name="gender" class="custom-control-input" value="female">
+              <label class="custom-control-label" for="gender-female">女性</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">出生年月日</label>
+          <div class="col-sm-8">
+            <input type="date" class="form-control" id="birthDate">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <button type="button" class="btn btn-primary btn-block" onclick="uploadPatient()">上傳資料</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <h3 class="text-center">回傳資訊</h3>
+    </div>
+    <div class="form-group row">
+      <textarea class="form-control" id="resultData" rows="20"></textarea>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+{ "resourceType": "Patient",
+  "identifier": [
+    {
+      "use": "usual",
+      "type": {
+        "text": "Computer-Stored Abulatory Records (COSTAR)"
+      },
+      "value": "10006579",
+      "assigner": {
+        "display": "AccMgr"
+      }
+    }
+  ],
+  "active": true,
+   "name": [
+    {
+      "family": "蕭",
+      "given": [
+        "蕭十一郎"]
+    }
+  ],
+  "gender": "unknown",
+  "birthDate": "1924-10-10",
+  "deceasedBoolean": false,
+  "managingOrganization": {
+          "reference": "Organization/1923622"
+        }
+}
+
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "身分證字號",
+      "value": "U12345622211",
+      "assigner": {
+        "reference": "Ministry of the Interior Affairs",
+        "display": "內政部"
+      }
+    }
+  ],
+  "name": [
+  {
+"use": "official",
+"text": "林帶玉",
+"family": "林",
+"given": ["林帶玉"]
+}        
+],
+  "gender": "female",
+  "birthDate": "1773-01-21",
+  "managingOrganization": {
+    "reference": "Organization/4"
+  }
+}
+
+
+
+1729074

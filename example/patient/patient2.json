@@ -1,0 +1,31 @@
+ {
+        "resourceType": "Patient",     
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "身分證字號",
+            "value": "U12341111111111",
+            "assigner": {
+              "reference": "Ministry of the Interior Affairs",
+              "display": "內政部"
+            }
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "text": "林小妹",
+            "family": "林",
+            "given": [
+              "林小妹"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1973-01-21",
+        "managingOrganization": {
+          "reference": "Organization/4"
+        }
+      }
+      
+   
