@@ -1,0 +1,20 @@
+{
+    "resourceType": "Practitioner",
+    "identifier": [
+        {
+          "use": "usual",
+          "system": "身分證字號",
+          "value": "：A222222222",
+          "assigner": {
+            "reference": "Ministry of the Interior Affairs",
+            "display": "內政部"
+          }
+        }
+      ],
+    "name": [
+      {
+       "text":"李醫師"
+      }
+    ],
+    "gender": "female"
+  }
